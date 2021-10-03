@@ -100,3 +100,15 @@ We experiment with different sliding window sizes, filter sizes, word embeddings
 Sentence CNN and Segment CNN perform well with small filter sizes while Segment CNN performs large filter sizes. Both single and multi label Sentence CNN performed well with GloVe word embeddings whereas Segment CNN with MIMIC word embeddings.
 
 For regularization of the model we use dropout technique on the output of convolution layer. Dropout randomly drops few nodes to prevent co-adaptation of hidden units and we set this value to 0.5 while training. We use Adam and rmsprop techniques to optimize our loss function.
+
+# Citation
+If you use this model in your work please cite as follows:
+```
+@article{mahendran2021extracting,
+  title={Extracting Adverse Drug Events from Clinical Notes},
+  author={Mahendran, Darshini and McInnes, Bridget T},
+  journal={arXiv e-prints},
+  pages={arXiv--2104},
+  year={2021}
+}
+ We will update the BibTeX with the conference publication soon.
