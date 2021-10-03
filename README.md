@@ -26,14 +26,17 @@ In the following, the algorithm is explained in detail and a walk thorugh guide 
 Create a python 3.6 virtual environment: ``` python3 -m venv /path_to_new_virtual_environment/name(new_env)```
 Activate the virtual environment ``` source new_env/bin/activate```
 
+Install manually
+```
+pip install numpy
+pip install cython
+pip install -U pip setuptools wheel
+pip install -U spacy
+python -m spacy download en_core_web_sm
+```
 Install the packages given in the *requirements.txt*
 ```
 pip -r install requirements.txt
-```
-Install spaCy
-```
-pip install -U spacy
-python -m spacy download en_core_web_sm
 ```
 
 ### Deployment
