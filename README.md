@@ -23,8 +23,11 @@ In the following, the algorithm is explained in detail and a walk thorugh guide 
 
 ## Installation
 
-Create a python 3.6 virtual environment: ``` python3 -m venv /path_to_new_virtual_environment/name(new_env)```
-Activate the virtual environment ``` source new_env/bin/activate```
+Create a python 3.6 virtual environment and activate the virtual environment: 
+``` 
+python3 -m venv /path_to_new_virtual_environment/name(new_env)
+source new_env/bin/activate
+```
 
 Install manually
 ```
@@ -40,7 +43,7 @@ pip -r install requirements.txt
 ```
 
 ### Deployment
-Sample dataset (from n2c2-2018 corpus) and external embeddings are provided (/sample). 
+Sample dataset (from n2c2-2018 corpus) and external embeddings needed to downloaded into ```/sample/word_embeddings/```. 
 
 Edit the configs file to set the paths and parameters 
 ```relex/N2C2/configs/n2c2.ini```
