@@ -23,10 +23,19 @@ In the following, the algorithm is explained in detail and a walk thorugh guide 
 
 ## Installation
 
-Create a python 3.6 virtual environment and install the packages given in the requirements.txt
+Create a python 3.6 virtual environment: ``` python3 -m venv /path_to_new_virtual_environment/name(new_env)```
+Activate the virtual environment ``` source new_env/bin/activate```
+
+Install the packages given in the *requirements.txt*
 ```
-pip install requirements.txt
+pip -r install requirements.txt
 ```
+Install spaCy
+```
+pip install -U spacy
+python -m spacy download en_core_web_sm
+```
+
 ### Deployment
 Sample dataset (from n2c2-2018 corpus) and external embeddings are provided (/sample). 
 
