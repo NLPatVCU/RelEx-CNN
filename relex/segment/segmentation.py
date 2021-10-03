@@ -84,7 +84,7 @@ def flip(p):
 class Segmentation:
 
     def __init__(self, dataset=None, entity_labels=None, no_rel_label=None, no_rel_multiple=False, sentence_align=False,
-                 test=False, dominant_entity='S', same_entity_relation=False,  write_Entites=False, parallelize=False, no_of_cores=64,
+                 test=False, dominant_entity='S', same_entity_relation=False,  write_Entites=False, no_of_cores=64,
                  predictions_folder=None):
 
         """
@@ -101,7 +101,6 @@ class Segmentation:
            :param same_entity_relation: flag when relation exists between same type of entities
            :param de_sample: flag to reduce the no of samples
            :param generalize: flag when relations are not dependent on the first given relation label
-           :param parallelize: flag to parallelize the segmentation
            :param no_of_cores: no of cores to run the parallelized segmentation
            :param write_Entites: write entities and predictions to file
            :param with_labels: Take the labels of the entites into consideration during segmentation
@@ -113,7 +112,6 @@ class Segmentation:
         self.entity_labels = entity_labels
         self.test = test
         self.same_entity_relation = same_entity_relation
-        self.parallelize = parallelize
         self.write_Entites = write_Entites
         self.nlp_model = English()
         self.nlp_model.max_length = 2000000
@@ -137,32 +135,18 @@ class Segmentation:
         self.segments = {'seg_preceding': [], 'seg_concept1': [], 'seg_concept2': [], 'seg_concept1_label': [],
                          'seg_concept2_label': [], 'seg_middle': [],
                          'seg_succeeding': [], 'sentence': [], 'label': [], 'track': []}
-        # if parallelize flag is true
-        if self.parallelize:
-            # Pool object which offers a convenient means of parallelizing the execution of a function
-            # across multiple input values, distributing the input data across processes
-            pool = Pool(no_of_cores)
-            all_args = []
-            for datafile, txt_path, ann_path in self.dataset:
-                all_args.append([datafile, txt_path, ann_path])
-            segments_file = pool.map(self.process_file_parallel, all_args)
-            pool.close()
-            pool.join()
 
-            for segment in segments_file:
-                # Add lists of segments to the segments object for the dataset
-                self.segments['seg_preceding'].extend(segment['preceding'])
-                self.segments['seg_concept1'].extend(segment['concept1'])
-                self.segments['seg_middle'].extend(segment['middle'])
-                self.segments['seg_concept2'].extend(segment['concept2'])
-                self.segments['seg_succeeding'].extend(segment['succeeding'])
-                self.segments['sentence'].extend(segment['sentence'])
-                self.segments['track'].extend(segment['track'])
-                # if not self.test:
-                self.segments['label'].extend(segment['label'])
-        else:
-            segment = self.process_file_serial(dataset)
+        # Pool object which offers a convenient means of parallelizing the execution of a function
+        # across multiple input values, distributing the input data across processes
+        pool = Pool(no_of_cores)
+        all_args = []
+        for datafile, txt_path, ann_path in self.dataset:
+            all_args.append([datafile, txt_path, ann_path])
+        segments_file = pool.map(self.process_file_parallel, all_args)
+        pool.close()
+        pool.join()
 
+        for segment in segments_file:
             # Add lists of segments to the segments object for the dataset
             self.segments['seg_preceding'].extend(segment['preceding'])
             self.segments['seg_concept1'].extend(segment['concept1'])
@@ -173,8 +157,6 @@ class Segmentation:
             self.segments['track'].extend(segment['track'])
             # if not self.test:
             self.segments['label'].extend(segment['label'])
-            self.segments['seg_concept1_label'].extend(segment['concept1_label'])
-            self.segments['seg_concept2_label'].extend(segment['concept2_label'])
 
         if not self.test:
             # print the number of instances of each relation classes
@@ -212,31 +194,6 @@ class Segmentation:
             write_entities_to_file(self.ann_obj, file_name, self.predictions_folder)
 
         segment = self.get_Segments_from_sentence(self.ann_obj)
-        return segment
-
-    def process_file_serial(self, dataset):
-        """
-        Serial the execution of segmentation across multiple input files, distributing the input data across processes
-        :param dataset: dataset
-        :return: segments
-        """
-        for datafile, txt_path, ann_path in dataset:
-            print("File", datafile)
-
-            self.file = datafile
-            self.ann_path = ann_path
-            self.txt_path = txt_path
-            self.ann_obj = Annotation(self.ann_path)
-
-            content = open(self.txt_path).read()
-
-            self.doc = self.nlp_model(content)
-
-            file_name = str(datafile) + ".ann"
-            if self.write_Entites and self.prediction_folder is not None:
-                write_entities_to_file(self.ann_obj, file_name, self.prediction_folder)
-
-            segment = self.get_Segments_from_sentence(self.ann_obj)
         return segment
 
     def get_Segments_from_relations(self, ann):

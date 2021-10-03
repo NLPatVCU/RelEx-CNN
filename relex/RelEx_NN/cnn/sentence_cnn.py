@@ -178,14 +178,14 @@ class Sentence_CNN:
             predictedclass.extend(y_pred)
             brat_track.extend(test_track)
 
-            print("--------------------------- Results ------------------------------------")
+            print("--------------------------- Fold Results ------------------------------------")
             print(classification_report(y_true, y_pred, labels=labels))
 
             fold_statistics = evaluate.cv_evaluation_fold(y_pred, y_true, labels)
 
             evaluation_statistics[fold] = fold_statistics
             fold += 1
-        print("--------------------- Results --------------------------------")
+        print("--------------------- Final Results --------------------------------")
         print(classification_report(np.array(originalclass), np.array(predictedclass), target_names=labels))
         print(confusion_matrix(np.array(originalclass), np.array(predictedclass)))
 

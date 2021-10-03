@@ -6,9 +6,10 @@ from utils import file
 
 
 class Set_Connection:
-    def __init__(self, sentence_only = False, sentences=None, labels=None, preceding_segs=None, concept1_segs=None,
-                 middle_segs=None, concept2_segs=None, succeeding_segs=None, concept1_label_segs=None,concept2_label_segs=None, track=None, dataset=None,
-                 rel_labels=None, no_labels=None, no_rel_multiple=False, dominant_entity = 'S', CSV=True, test=False, parallelize= False, no_of_cores = 64, predictions_folder = None, write_Entites = False):
+    def __init__(self, CSV=False, dataset=None, rel_labels=None, no_labels=None, test=False, no_rel_multiple=False,
+                 dominant_entity = 'S', no_of_cores = 64, predictions_folder = None,
+                 write_Entites = False, sentence_only = False, sentences=None, labels=None, preceding_segs=None, concept1_segs=None,
+                 middle_segs=None, concept2_segs=None, succeeding_segs=None, concept1_label_segs=None,concept2_label_segs=None, track=None, ):
         """
         Creates data objects directly from the dataset folder and call for segmentation or take in segments (a set of CSVs)
         :type write_Entites: write entities and predictions to file
@@ -17,7 +18,7 @@ class Set_Connection:
         :param labels: path to labels CSV
         :param preceding_segs: path to preceding segments CSV
         :param concept1_segs: path to concept1 segments CSV
-        :param middle_segs: path to middle segements CSV
+        :param middle_segs: path to middle segments CSV
         :param succeeding_segs: path to succeeding segments CSV
         :param track: path to track information (file, first entity, second entity)
         :param concept1_label_segs: path to concept1 label segments CSV
@@ -35,13 +36,10 @@ class Set_Connection:
         self.CSV = CSV
         self.sentence_only = sentence_only
         self.test = test
-        self.parallelize = parallelize
         if self.CSV:
             self.sentences = sentences
             self.labels = labels
             self.track = track
-            self.concept1_label_segs = concept1_label_segs
-            self.concept2_label_segs = concept2_label_segs
             if not self.sentence_only:
                 self.preceding_segs = preceding_segs
                 self.concept1_segs = concept1_segs
@@ -56,11 +54,7 @@ class Set_Connection:
             self.rel_labels = rel_labels
             self.no_labels = no_labels
             self.no_rel_multiple = no_rel_multiple
-
-            if self.parallelize:
-                self.data_object = Segmentation(self.dataset, self.rel_labels, self.no_labels, self.no_rel_multiple, test=self.test, dominant_entity = dominant_entity, parallelize = True, no_of_cores=no_of_cores, predictions_folder = predictions_folder,write_Entites = write_Entites ).segments
-            else:
-                self.data_object = Segmentation(self.dataset, self.rel_labels, self.no_labels, self.no_rel_multiple, test=self.test, dominant_entity = dominant_entity, predictions_folder = predictions_folder,write_Entites = write_Entites).segments
+            self.data_object = Segmentation(self.dataset, self.rel_labels, self.no_labels, self.no_rel_multiple, test=self.test, dominant_entity = dominant_entity, no_of_cores=no_of_cores, predictions_folder = predictions_folder,write_Entites = write_Entites ).segments
 
     @property
     def get_data_object(self):
@@ -73,8 +67,6 @@ class Set_Connection:
         train_data = file.read_from_file(self.sentences)
         train_labels = file.read_from_file(self.labels)
         track_list = file.read_from_file(self.track)
-        train_concept1_label = file.read_from_file(self.concept1_label_segs)
-        train_concept2_label = file.read_from_file(self.concept2_label_segs)
         # track_list = file.read_from_file(self.track, read_as_int=True)
 
         if not self.sentence_only:
@@ -87,8 +79,6 @@ class Set_Connection:
         # Adds segments, labels, and sentences to object
         obj['sentence'] = train_data
         obj['label'] = train_labels
-        obj['seg_concept1_label'] = train_concept1_label
-        obj['seg_concept2_label'] = train_concept2_label
         obj['track'] = track_list
         if not self.sentence_only:
             obj['seg_preceding'] = train_preceding

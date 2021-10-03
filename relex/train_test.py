@@ -7,13 +7,11 @@ from RelEx_NN.cnn import Sentence_CNN
 from segment import Set_Connection
 
 
-def segment(train, test, entites, no_rel=None, dominant_entity='S', no_rel_multiple=False, parallelize=False,
-            no_of_cores=64, predictions_folder=None):
+def segment(train, test, entites, no_rel=None, dominant_entity='S', no_rel_multiple=False, no_of_cores=64, predictions_folder=None):
     """
     Perform segmentation for the training and testing data
     :param dominant_entity:
     :param write_Entites:
-    :param parallelize:
     :param no_of_cores:
     :param train: path to train data
     :param test: path to test data
@@ -26,15 +24,14 @@ def segment(train, test, entites, no_rel=None, dominant_entity='S', no_rel_multi
 
     if no_rel:
         seg_train = Set_Connection(CSV=False, dataset=train, rel_labels=entites, no_labels=no_rel,
-                                   no_rel_multiple=no_rel_multiple, dominant_entity=dominant_entity,
-                                   parallelize=parallelize, no_of_cores=no_of_cores,
+                                   no_rel_multiple=no_rel_multiple, dominant_entity=dominant_entity, no_of_cores=no_of_cores,
                                    predictions_folder=predictions_folder).data_object
     else:
         print("Start segmentation of train set")
-        seg_train = Set_Connection(CSV=False, dataset=train, rel_labels=entites, no_rel_multiple=no_rel_multiple, dominant_entity=dominant_entity, parallelize=parallelize, no_of_cores=no_of_cores,
+        seg_train = Set_Connection(CSV=False, dataset=train, rel_labels=entites, no_rel_multiple=no_rel_multiple, dominant_entity=dominant_entity, no_of_cores=no_of_cores,
                                    predictions_folder=predictions_folder).data_object
     print("Start segmentation of test set")
-    seg_test = Set_Connection(CSV=False, dataset=test, rel_labels=entites, test=True, no_rel_multiple=no_rel_multiple, dominant_entity=dominant_entity, parallelize=parallelize, no_of_cores=no_of_cores, predictions_folder=predictions_folder).data_object
+    seg_test = Set_Connection(CSV=False, dataset=test, rel_labels=entites, test=True, no_rel_multiple=no_rel_multiple, dominant_entity=dominant_entity, no_of_cores=no_of_cores, predictions_folder=predictions_folder).data_object
 
     return seg_train, seg_test
 
