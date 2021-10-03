@@ -28,9 +28,15 @@ Create a python 3.6 virtual environment and install the packages given in the re
 pip install requirements.txt
 ```
 ### Deployment
-Sample dataset (some files from n2c2-2018 corpus) and external embeddings are provided (/sample). 
-Edit the configs file to set the paths and parameters (relex/N2C2/configs/n2c2.ini)
-Run the following program: python relex/run_N2C2.py
+Sample dataset (from n2c2-2018 corpus) and external embeddings are provided (/sample). 
+
+Edit the configs file to set the paths and parameters 
+```relex/N2C2/configs/n2c2.ini```
+
+Run the following program: 
+```
+python relex/run_N2C2.py
+```
 
 ## Algorithm 
 ### Data segmentation <a name="data_segmentation"></a>
