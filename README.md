@@ -23,11 +23,8 @@ In the following, the algorithm is explained in detail and a walk thorugh guide 
 
 ## Installation
 
-Create a python 3.6 virtual environment and activate the virtual environment: 
-``` 
-python3 -m venv /path_to_new_virtual_environment/name(new_env)
-source new_env/bin/activate
-```
+Create a python 3.6 virtual environment:``` python3 -m venv /path_to_new_virtual_environment/name(new_env)```
+Activate the virtual environment: ```source new_env/bin/activate```
 
 Install manually
 ```
@@ -43,14 +40,17 @@ pip -r install requirements.txt
 ```
 
 ### Deployment
-Sample dataset (from n2c2-2018 corpus) and external embeddings needed to downloaded into ```/sample/word_embeddings/```. 
+Sample dataset (from n2c2-2018 corpus, i2b2-2010 corpus) is given. External embeddings needed to downloaded. 
 
 Edit the configs file to set the paths and parameters 
-```relex/N2C2/configs/n2c2.ini```
+```relex/configs/n2c2.ini```
+
+Edit the path to the config file in the run.py:
+```config.read('configs/n2c2.ini')```
 
 Run the following program: 
 ```
-python relex/run_N2C2.py
+python relex/run.py
 ```
 
 ## Algorithm 
@@ -112,6 +112,7 @@ A Sentence is explicitly segmented into 5 segments:
 -   succeeding - tokenized words after the second concept
 
 ![](https://lh5.googleusercontent.com/_eS0O7NU9XaTM8NoO0-6ETLMF379pv25M0K22PLtni0mX5eskWrQuy196S4RA9gajiZ9zuUVIolVgO-y_iAl6hp-01jBM856rojESO1YwWIJA3oZfygQ3y5DwmdPoDdG04pMWoeD)
+
 As the figure above shows, we construct separate convolution units for each segment and concatenate before the fixed length vector is fed to the dense layer that performs the classification.
 
 We experiment with different sliding window sizes, filter sizes, word embeddings, loss functions to fine tune the above three models.
