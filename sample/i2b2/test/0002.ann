@@ -1,0 +1,122 @@
+T1	test 3730 3749	a follow-up ct scan
+T2	problem 3811 3823	hepatomegaly
+T3	problem 3795 3807	splenomegaly
+T4	test 2516 2526	percussion
+T5	test 2898 2901	bun
+T6	problem 2632 2641	nontender
+T7	problem 2644 2656	nondistended
+T8	treatment 2067 2075	percocet
+T9	test 2904 2914	creatinine
+T10	test 2956 2966	hematocrit
+T11	test 3248 3259	chest x-ray
+T12	problem 3590 3610	her left calf lesion
+T13	test 3030 3044	platelet count
+T14	test 1648 1677	an esophagogastroduodenoscopy
+T15	test 3055 3062	amylase
+T16	problem 2741 2788	a 2 x 3 cm tender mass in the lateral left calf
+T17	problem 3080 3088	elevated
+T18	treatment 2021 2028	bactrim
+T19	problem 2699 2717	hepatosplenomegaly
+T20	treatment 2078 2086	prinovil
+T21	treatment 2099 2114	mycelex troches
+T22	problem 2380 2388	afebrile
+T23	problem 696 734	an abscess in the left lower extremity
+T24	test 2417 2431	blood pressure
+T25	test 2441 2451	heent exam
+T26	problem 894 918	left upper quadrant pain
+T27	test 2499 2511	auscultation
+T28	problem 2850 2855	edema
+T29	problem 597 622	heterosexual transmission
+T30	test 3161 3164	ast
+T31	problem 232 244	hiv positive
+T32	problem 3209 3229	positive for protein
+T33	problem 3450 3458	her pain
+T34	test 3376 3389	many cultures
+T35	test 2541 2560	cardiovascular exam
+T36	problem 2604 2610	murmur
+T37	problem 3954 3962	the cyst
+T38	problem 3934 3941	a stone
+T39	treatment 3653 3667	iv ceftriaxone
+T40	problem 3518 3527	some pain
+T41	treatment 3689 3703	po doxycycline
+T42	test 3098 3101	esr
+T43	problem 653 670	cat scratch fever
+T44	problem 1604 1622	steady weight loss
+T45	test 3069 3075	lipase
+T46	test 3008 3016	56 polys
+T47	test 3152 3155	alt
+T48	test 3125 3145	alkaline phosphatase
+T49	test 3232 3241	bilirubin
+T50	test 3170 3178	beta hcg
+T51	test 2940 2949	potassium
+T52	test 3194 3204	urinalysis
+T53	treatment 527 545	blood transfusions
+T54	problem 471 483	hiv positive
+T55	treatment 835 838	ddi
+T56	problem 823 831	vomiting
+T57	problem 806 818	pancytopenia
+T58	test 1406 1430	her alkaline phosphatase
+T59	problem 1435 1452	slightly elevated
+T60	test 1487 1498	her amylase
+T61	problem 1503 1518	mildly elevated
+T62	problem 327 335	vomiting
+T63	test 3021 3027	1 band
+T64	problem 345 370	a long-standing complaint
+T65	problem 316 322	nausea
+T66	problem 863 869	nausea
+T67	problem 1385 1403	hyperdense kidneys
+T68	problem 874 882	vomiting
+T69	problem 3908 3928	a cyst in her kidney
+T70	test 1765 1777	a gi work-up
+T71	test 1789 1802	an evaluation
+T72	problem 1806 1840	new abscess in her left lower calf
+T73	treatment 4157 4171	po doxycycline
+T74	treatment 754 781	any anti retroviral therapy
+T75	problem 1570 1599	progressive failure to thrive
+T76	test 4094 4102	cultures
+T77	treatment 683 692	resection
+T78	treatment 2089 2096	dapsone
+T79	test 2972 2994	white blood cell count
+T80	problem 1050 1058	the pain
+T81	problem 1062 1076	a burning pain
+T82	problem 992 1004	similar pain
+T83	problem 2791 2822	medial 1 cm mass above her knee
+T84	problem 280 304	left upper quadrant pain
+T85	treatment 3573 3586	a debridement
+T86	problem 3826 3839	the 1 cm cyst
+T87	problem 1289 1331	a 1 cm cyst in the right lobe of the liver
+T88	problem 1242 1283	fatty infiltration of her liver diffusely
+T89	problem 2403 2414	orthostatic
+T90	test 4119 4131	her aspirate
+T91	problem 3314 3326	rib fracture
+T92	treatment 1186 1197	h2 blockers
+T93	problem 1960 1963	hiv
+T94	problem 2331 2345	acute distress
+T95	treatment 1725 1732	sedated
+T96	treatment 1174 1182	antacids
+T97	treatment 3549 3557	percocet
+T98	test 2927 2933	sodium
+T99	test 1219 1228	a ct scan
+R1	TeRP Arg1:T1 Arg2:T2
+R2	TeRP Arg1:T1 Arg2:T3
+R3	TeRP Arg1:T35 Arg2:T36
+R4	PIP Arg1:T38 Arg2:T37
+R5	TrAP Arg1:T39 Arg2:T12
+R6	TrAP Arg1:T41 Arg2:T12
+R7	TeRP Arg1:T45 Arg2:T17
+R8	TeRP Arg1:T52 Arg2:T32
+R9	TrCP Arg1:T55 Arg2:T56
+R10	TrCP Arg1:T55 Arg2:T57
+R11	TeRP Arg1:T58 Arg2:T59
+R12	TeRP Arg1:T60 Arg2:T61
+R13	PIP Arg1:T64 Arg2:T65
+R14	PIP Arg1:T64 Arg2:T62
+R15	TeCP Arg1:T71 Arg2:T72
+R16	TrNAP Arg1:T74 Arg2:T56
+R17	TrNAP Arg1:T74 Arg2:T57
+R18	TrAP Arg1:T77 Arg2:T23
+R19	PIP Arg1:T80 Arg2:T81
+R20	TrAP Arg1:T85 Arg2:T12
+R21	TrAP Arg1:T97 Arg2:T40
+R22	TeRP Arg1:T99 Arg2:T88
+R23	TeRP Arg1:T99 Arg2:T87

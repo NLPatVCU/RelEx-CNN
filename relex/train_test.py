@@ -7,31 +7,34 @@ from RelEx_NN.cnn import Sentence_CNN
 from segment import Set_Connection
 
 
-def segment(train, test, entites, no_rel=None, dominant_entity='S', no_rel_multiple=False, no_of_cores=64, predictions_folder=None):
+def segment(train, test, entites, no_rel=None, no_rel_multiple=False, parallelize=False, no_of_cores=64, down_sample=None, down_sample_ratio=0.2,
+            predictions_folder=None):
     """
-    Perform segmentation for the training and testing data
-    :param dominant_entity:
-    :param write_Entites:
-    :param no_of_cores:
+    Segmentation of the training and testing data
     :param train: path to train data
     :param test: path to test data
     :param entites: list of entities that create the relations
     :param no_rel: name the label when entities that do not have relations in a sentence are considered
     :param no_rel_multiple: flag whether multiple labels are possibles for No-relation
     :param predictions_folder: path to predictions (output) folder
+    :param parallelize: parallelize the segmentation
+    :param no_of_cores: number of cores used for parallelization
     :return: segments of train and test data
     """
-
     if no_rel:
         seg_train = Set_Connection(CSV=False, dataset=train, rel_labels=entites, no_labels=no_rel,
-                                   no_rel_multiple=no_rel_multiple, dominant_entity=dominant_entity, no_of_cores=no_of_cores,
-                                   predictions_folder=predictions_folder).data_object
+                                   no_rel_multiple=no_rel_multiple, write_Entites=False,
+                                   parallelize=parallelize, no_of_cores=no_of_cores,
+                                   predictions_folder=predictions_folder, down_sample=down_sample, down_sample_ratio=down_sample_ratio).data_object
     else:
-        print("Start segmentation of train set")
-        seg_train = Set_Connection(CSV=False, dataset=train, rel_labels=entites, no_rel_multiple=no_rel_multiple, dominant_entity=dominant_entity, no_of_cores=no_of_cores,
-                                   predictions_folder=predictions_folder).data_object
-    print("Start segmentation of test set")
-    seg_test = Set_Connection(CSV=False, dataset=test, rel_labels=entites, test=True, no_rel_multiple=no_rel_multiple, dominant_entity=dominant_entity, no_of_cores=no_of_cores, predictions_folder=predictions_folder).data_object
+        print("Starting segmentation of train data")
+        seg_train = Set_Connection(CSV=False, dataset=train, rel_labels=entites, write_Entites=False,
+                                   parallelize=parallelize, no_of_cores=no_of_cores,
+                                   predictions_folder=predictions_folder, down_sample=down_sample, down_sample_ratio=down_sample_ratio).data_object
+
+    print("Starting segmentation of test data")
+    seg_test = Set_Connection(CSV=False, dataset=test, rel_labels=entites, test=True, parallelize=True,
+                              write_Entites=True, no_of_cores=64, predictions_folder=predictions_folder, down_sample=down_sample, down_sample_ratio=down_sample_ratio).data_object
 
     return seg_train, seg_test
 

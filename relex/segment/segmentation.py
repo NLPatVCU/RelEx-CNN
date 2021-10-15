@@ -84,11 +84,11 @@ def flip(p):
 class Segmentation:
 
     def __init__(self, dataset=None, entity_labels=None, no_rel_label=None, no_rel_multiple=False, sentence_align=False,
-                 test=False, dominant_entity='S', same_entity_relation=False,  write_Entites=False, no_of_cores=64,
-                 predictions_folder=None):
+                 test=False, same_entity_relation=False, dominant_entity='S', write_Entites=False, no_of_cores=64,
+                 predictions_folder=None, down_sample=False, down_sample_ratio=0.2):
 
         """
-           Data files are read in and the sentence where the entitiy pair is located is segmented into 5
+           Data files are read in and the sentence where the entity pair is located is segmented into 5
            along with the labels and the track information (file number, entity1 and entity 2) that helps to write predictions
            back to file.
            :param dataset: path to dataset
@@ -115,6 +115,8 @@ class Segmentation:
         self.write_Entites = write_Entites
         self.nlp_model = English()
         self.nlp_model.max_length = 2000000
+        self.down_sample = down_sample
+        self.down_sample_ratio = down_sample_ratio / 100
         if no_rel_label:
             self.no_rel_label = no_rel_label
         else:
@@ -332,9 +334,13 @@ class Segmentation:
                                     label_rel = self.no_rel_label
                                 else:
                                     label_rel = self.no_rel_label[0]
-                                segment = self.extract_sentences(ann, key2, key1, label_rel)
-                                if segment is not None:
-                                    doc_segments = add_file_segments(doc_segments, segment)
+                                    if flip(0.1) == 'True':
+                                        segment = self.extract_sentences(ann, key2, key1, label_rel)
+                                        if segment is not None:
+                                            doc_segments = add_file_segments(doc_segments, segment)
+                                # segment = self.extract_sentences(ann, key2, key1, label_rel)
+                                # if segment is not None:
+                                #     doc_segments = add_file_segments(doc_segments, segment)
 
                     # when the entity pair do not contain entities of the same type
                     for i in range(len(self.entity_labels) - 1):
@@ -374,14 +380,16 @@ class Segmentation:
                                         label_rel = self.no_rel_label
                                     else:
                                         label_rel = self.no_rel_label[0]
-                                        # if flip(0.1) == 'True':
-                                        #     label_rel = self.no_rel_label[0]
-                                        #     segment = self.extract_sentences(ann, key2, key1, label_rel)
-                                        #     if segment is not None:
-                                        #         doc_segments = add_file_segments(doc_segments, segment)
-                                    segment = self.extract_sentences(ann, key2, key1, label_rel)
-                                    if segment is not None:
-                                        doc_segments = add_file_segments(doc_segments, segment)
+                                        segment = self.extract_sentences(ann, key2, key1, label_rel)
+                                        if self.down_sample:
+                                            if flip(self.down_sample_ratio) == 'True':
+                                                label_rel = self.no_rel_label[0]
+                                                segment = self.extract_sentences(ann, key2, key1, label_rel)
+                                                if segment is not None:
+                                                    doc_segments = add_file_segments(doc_segments, segment)
+                                        else:
+                                            if segment is not None:
+                                                doc_segments = add_file_segments(doc_segments, segment)
 
         return doc_segments
 

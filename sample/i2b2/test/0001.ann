@@ -1,0 +1,255 @@
+T1	treatment 5731 5747	his home regimen
+T2	problem 5692 5699	cad/chf
+T3	problem 5800 5818	his acute gi bleed
+T4	test 3247 3252	basos
+T5	test 5464 5472	biopsies
+T6	treatment 6859 6864	actos
+T7	treatment 8125 8133	coumadin
+T8	test 2812 2816	leuk
+T9	test 2771 2780	bilirubin
+T10	problem 2433 2438	m/r/g
+T11	test 1025 1041	his previous hct
+T12	problem 4403 4423	lower abdominal pain
+T13	test 3293 3301	microcyt
+T14	problem 2359 2375	anicteric sclera
+T15	problem 2347 2350	nad
+T16	test 2994 3000	sodium
+T17	test 3384 3391	inr(pt)
+T18	treatment 6315 6340	long-term anticoagulation
+T19	problem 6267 6271	a pe
+T20	problem 6237 6251	recurrent dvts
+T21	test 3237 3240	eos
+T22	test 3038 3047	total co2
+T23	test 2923 2930	lactate
+T24	treatment 7527 7535	ramipril
+T25	problem 1923 1925	pe
+T26	test 5278 5298	a repeat colonoscopy
+T27	problem 5330 5343	mucosal signs
+T28	problem 5347 5374	moderate ulcerative colitis
+T29	problem 5392 5459	8 mm ulcer at junction of distal descending colon and sigmoid colon
+T30	problem 5380 5386	polyps
+T31	test 2882 2887	yeast
+T32	test 1817 1829	cardiac cath
+T33	test 3398 3415	gi bleeding study
+T34	treatment 6757 6764	ritalin
+T35	problem 1578 1580	cp
+T36	treatment 125 160	nsaids/anti-inflammatory classifier
+T37	treatment 329 346	coil embolization
+T38	problem 350 365	bleeding vessel
+T39	problem 2403 2406	jvd
+T40	test 3121 3124	hct
+T41	problem 689 698	a symptom
+T42	problem 2499 2501	nt
+T43	treatment 1870 1879	pacemaker
+T44	problem 1843 1865	sinus node dysfunction
+T45	treatment 6600 6607	insulin
+T46	problem 1728 1731	chf
+T47	test 907 917	his vitals
+T48	test 2867 2875	bacteria
+T49	problem 1959 1977	ulcerative colitis
+T50	test 3087 3090	wbc
+T51	problem 8584 8619	significant unexplained weight loss
+T52	problem 2477 2496	minimally distended
+T53	test 2758 2764	ketone
+T54	treatment 6047 6055	coumadin
+T55	treatment 1988 2014	c4-7 anterior discectomies
+T56	test 3007 3016	potassium
+T57	problem 7763 7765	dm
+T58	test 3591 3612	ct abdomen w/contrast
+T59	treatment 2181 2186	rehab
+T60	problem 8283 8342	rectal bleeding from inferior mesenteric artery tributaries
+T61	treatment 6696 6702	zoloft
+T62	treatment 7452 7466	spironolactone
+T63	test 3278 3287	poikilocy
+T64	test 5140 5153	a colonoscopy
+T65	problem 3784 3818	left adrenal fat-containing lesion
+T66	problem 3835 3848	a myelolipoma
+T67	problem 7915 7933	ulcerative colitis
+T68	problem 7945 7958	severe flares
+T69	problem 4999 5024	active source of bleeding
+T70	test 1430 1437	his hct
+T71	problem 5942 5962	his risk of bleeding
+T72	treatment 6782 6790	ramipril
+T73	test 2744 2751	glucose
+T74	treatment 1306 1311	fluid
+T75	test 2956 2963	glucose
+T76	test 3373 3376	ptt
+T77	treatment 2033 2068	r intracerebral hemorrhage drainage
+T78	problem 2566 2574	cyanosis
+T79	treatment 7319 7329	folic acid
+T80	treatment 7600 7619	hydrochlorothiazide
+T81	test 2895 2898	epi
+T82	problem 8515 8535	sudden blurry vision
+T83	test 368 381	sigmoidoscopy
+T84	problem 2458 2463	rales
+T85	test 3362 3364	pt
+T86	test 4555 4569	an angiography
+T87	problem 4577 4600	bleeding in two vessels
+T88	treatment 7965 7972	insulin
+T89	test 304 325	mesenteric angiograpm
+T90	test 2716 2723	nitrite
+T91	treatment 6574 6582	atenolol
+T92	treatment 7681 7693	pioglitazone
+T93	problem 3715 3757	the patient 's bright red blood per rectum
+T94	treatment 2019 2023	cabg
+T95	treatment 5598 5619	the patient 's asacol
+T96	problem 5576 5594	ulcerative colitis
+T97	problem 564 569	brbpr
+T98	problem 3968 4022	subcentimeter attenuation lesion within the lower pole
+T99	test 3109 3112	hgb
+T100	problem 1888 1891	dvt
+T101	test 2982 2987	creat
+T102	treatment 1671 1678	3v-cabg
+T103	problem 1663 1666	cad
+T104	problem 2507 2523	rebound/guarding
+T105	treatment 1476 1483	2u prbc
+T106	test 944 949	a hct
+T107	problem 4076 4138	3-mm noncalcified pulmonary nodule within the right lower lobe
+T108	test 1196 1202	his bp
+T109	treatment 7072 7084	atorvastatin
+T110	treatment 6809 6815	asacol
+T111	treatment 6728 6740	atorvastatin
+T112	treatment 6836 6844	carafate
+T113	problem 1834 1838	lbbb
+T114	test 3142 3145	mch
+T115	test 2787 2796	urobilngn
+T116	problem 8539 8553	slurred speech
+T117	treatment 6005 6029	his home insulin regimen
+T118	problem 5967 5971	dm-2
+T119	treatment 1946 1954	warfarin
+T120	test 3225 3230	monos
+T121	test 2632 2637	color
+T122	treatment 7772 7782	mesalamine
+T123	problem 985 996	hypovolemic
+T124	problem 8461 8480	shortness of breath
+T125	treatment 7145 7160	methylphenidate
+T126	treatment 1699 1707	stenting
+T127	test 6343 6355	his goal inr
+T128	problem 1652 1656	dm-2
+T129	test 4207 4231	followup ct of the chest
+T130	treatment 1488 1495	3 u ffp
+T131	test 3196 3201	neuts
+T132	problem 4442 4447	brpbr
+T133	problem 1158 1189	a large , bloody bowel movement
+T134	test 2646 2652	appear
+T135	treatment 7994 7997	nph
+T136	problem 790 795	a uti
+T137	treatment 6952 6962	tamsulosin
+T138	problem 8556 8566	chest pain
+T139	treatment 5927 5935	coumadin
+T140	problem 1135 1139	clot
+T141	test 3326 3335	plt count
+T142	treatment 6418 6438	v. winchester filter
+T143	problem 6379 6387	bleeding
+T144	test 5494 5509	his colonoscopy
+T145	problem 3875 3915	hypodense lesion within the caudate lobe
+T146	test 3153 3157	mchc
+T147	treatment 8056 8066	sertraline
+T148	problem 4374 4376	uc
+T149	problem 1583 1586	sob
+T150	problem 461 464	dm2
+T151	problem 1765 1801	right parietal intracranial bleeding
+T152	treatment 543 549	asacol
+T153	problem 521 539	ulcerative colitis
+T154	treatment 7976 7979	nph
+T155	treatment 6538 6557	spironolactone/hctz
+T156	treatment 475 479	cabg
+T157	problem 467 470	cad
+T158	problem 3440 3465	increased tracer activity
+T159	problem 3573 3588	active bleeding
+T160	test 384 395	colonoscopy
+T161	problem 2539 2560	trace edema at ankles
+T162	test 3165 3168	rdw
+T163	treatment 6905 6913	warfarin
+T164	problem 5111 5119	bleeding
+T165	treatment 6672 6679	aspirin
+T166	problem 4962 4991	old blood in the rectal vault
+T167	treatment 772 785	ciprofloxacin
+T168	test 2971 2981	urea n-25*
+T169	treatment 492 518	long term anti-coagulation
+T170	problem 482 488	dvt/pe
+T171	test 3053 3062	anion gap
+T172	test 3210 3216	lymphs
+T173	test 4707 4712	a hct
+T174	test 3133 3136	mcv
+T175	problem 6038 6044	dvt/pe
+T176	treatment 6717 6723	flomax
+T177	problem 4184 4204	a primary malignancy
+T178	treatment 8018 8039	sliding scale insulin
+T179	treatment 4748 4760	his coumadin
+T180	problem 4792 4807	his acute bleed
+T181	test 2848 2858	rbc-21-50*
+T182	problem 8569 8578	faintness
+T183	test 3097 3100	rbc
+T184	test 5077 5090	a colonoscopy
+T185	test 1737 1739	ef
+T186	test 1346 1363	a tagged rbc scan
+T187	test 2803 2805	ph
+T188	test 1756 1760	echo
+T189	problem 1006 1022	hemoconcentrated
+T190	treatment 6132 6157	life-long anticoagulation
+T191	problem 841 872	a large , bloody bowel movement
+T192	problem 3674 3695	other bowel pathology
+T193	problem 4368 4371	chf
+T194	problem 634 654	lower abdominal pain
+T195	problem 1601 1616	continued brbpr
+T196	problem 4534 4552	his lower gi bleed
+T197	problem 1589 1597	abd pain
+T198	test 1108 1122	an initial dre
+T199	test 1555 1558	hct
+T200	treatment 5863 5870	aspirin
+T201	problem 4362 4365	cad
+T202	treatment 6453 6471	2 large bore piv's
+T203	test 3023 3031	chloride
+T204	problem 3663 3670	colitis
+T205	test 2730 2737	protein
+T206	problem 8483 8512	weakness in your legs or arms
+T207	test 2859 2866	wbc-0-2
+T208	treatment 163 173	vancomycin
+T209	test 4908 4928	a flex sigmoidoscopy
+T210	problem 4356 4359	dm2
+T211	treatment 6882 6888	folate
+T212	treatment 1711 1714	svg
+T213	treatment 7389 7397	atenolol
+T214	treatment 6635 6645	furosemide
+T215	test 2293 2295	vs
+T216	treatment 7221 7234	acetaminophen
+T217	problem 4476 4481	brbpr
+T218	treatment 1084 1096	an ng lavage
+R1	TrAP Arg1:T1 Arg2:T2
+R2	TrAP Arg1:T1 Arg2:T3
+R3	TrAP Arg1:T18 Arg2:T19
+R4	TrAP Arg1:T18 Arg2:T20
+R5	PIP Arg1:T20 Arg2:T19
+R6	TeRP Arg1:T26 Arg2:T27
+R7	TeRP Arg1:T26 Arg2:T28
+R8	TeRP Arg1:T26 Arg2:T29
+R9	TeRP Arg1:T26 Arg2:T30
+R10	PIP Arg1:T27 Arg2:T28
+R11	TrAP Arg1:T37 Arg2:T38
+R12	TrAP Arg1:T43 Arg2:T44
+R13	PIP Arg1:T65 Arg2:T66
+R14	PIP Arg1:T67 Arg2:T68
+R15	TeRP Arg1:T86 Arg2:T87
+R16	TeCP Arg1:T89 Arg2:T38
+R17	TrAP Arg1:T92 Arg2:T57
+R18	TrAP Arg1:T95 Arg2:T96
+R19	PIP Arg1:T100 Arg2:T25
+R20	TrAP Arg1:T102 Arg2:T103
+R21	TrAP Arg1:T117 Arg2:T118
+R22	TrAP Arg1:T119 Arg2:T100
+R23	TrAP Arg1:T119 Arg2:T25
+R24	TrAP Arg1:T122 Arg2:T67
+R25	TrAP Arg1:T142 Arg2:T143
+R26	TrAP Arg1:T152 Arg2:T153
+R27	PIP Arg1:T153 Arg2:T97
+R28	TrAP Arg1:T156 Arg2:T157
+R29	PIP Arg1:T158 Arg2:T159
+R30	TrAP Arg1:T167 Arg2:T136
+R31	TrAP Arg1:T169 Arg2:T170
+R32	TrNAP Arg1:T179 Arg2:T180
+R33	TeCP Arg1:T184 Arg2:T164
+R34	PIP Arg1:T194 Arg2:T41
+R35	TeRP Arg1:T198 Arg2:T140
+R36	TeRP Arg1:T209 Arg2:T166
+R37	TeRP Arg1:T209 Arg2:T69

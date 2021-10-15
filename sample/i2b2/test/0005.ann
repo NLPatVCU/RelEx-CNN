@@ -1,0 +1,240 @@
+T1	treatment 7107 7113	evista
+T2	treatment 6916 6925	nutrition
+T3	treatment 6899 6911	electrolytes
+T4	treatment 6831 6844	her synthroid
+T5	problem 6796 6807	hypothyroid
+T6	treatment 6890 6896	fluids
+T7	test 6688 6708	the hemophilus panel
+T8	test 6668 6674	guaiac
+T9	test 7743 7757	her hematocrit
+T10	problem 7624 7638	hypothyroidism
+T11	problem 7615 7621	anemia
+T12	problem 7571 7582	hypotension
+T13	problem 7596 7612	volume depletion
+T14	treatment 7390 7399	synthroid
+T15	treatment 7305 7314	meclizine
+T16	test 1172 1188	pending cultures
+T17	problem 1156 1171	early pneumonia
+T18	treatment 7200 7231	triamterene/hydrochlorothiazide
+T19	treatment 7168 7178	lisinopril
+T20	problem 5391 5402	dehydration
+T21	problem 5300 5314	hyperlipidemia
+T22	problem 5335 5358	a leukocytosis/bandemia
+T23	test 5181 5188	glucose
+T24	problem 5261 5282	stage i breast cancer
+T25	test 5122 5133	bicarbonate
+T26	test 5164 5174	creatinine
+T27	problem 6637 6657	evidence of bleeding
+T28	problem 6572 6589	a chronic problem
+T29	problem 6555 6561	anemia
+T30	problem 6600 6621	known iron deficiency
+T31	treatment 5981 6002	her antihypertensives
+T32	test 5964 5978	her evaluation
+T33	problem 5895 5917	gastrointestinal bleed
+T34	problem 5921 5942	adrenal insufficiency
+T35	test 6069 6072	dfa
+T36	problem 6055 6066	influenza a
+T37	problem 5662 5704	a diarrheal and viral respiratory syndrome
+T38	problem 5584 5595	hypotension
+T39	problem 5627 5643	volume depletion
+T40	problem 4475 4480	edema
+T41	problem 4284 4320	i/vi holosystolic murmur at the apex
+T42	treatment 1132 1140	levaquin
+T43	test 4256 4262	rhythm
+T44	treatment 2188 2205	tamoxifen therapy
+T45	problem 4386 4395	nontender
+T46	test 4353 4365	auscultation
+T47	problem 3953 3967	acute distress
+T48	test 2791 2808	ejection fraction
+T49	test 3689 3706	oxygen saturation
+T50	problem 6847 6857	osteopenia
+T51	test 5022 5033	lymphocytes
+T52	test 4247 4251	rate
+T53	problem 4028 4048	conjunctiva injected
+T54	problem 2399 2447	some microvascular cerebral white matter changes
+T55	test 4666 4683	electrocardiogram
+T56	problem 4696 4713	sinus tachycardia
+T57	problem 4785 4812	new t wave inversion in iii
+T58	problem 4817 4852	old t wave inversions in avl and v1
+T59	problem 6497 6505	diarrhea
+T60	problem 4634 4663	acute cardiopulmonary process
+T61	treatment 3322 3331	synthroid
+T62	test 1804 1850	a right lower extremity noninvasive ultrasound
+T63	problem 1873 1895	deep venous thrombosis
+T64	test 4719 4725	a rate
+T65	problem 488 509	decreased p.o. intake
+T66	treatment 6746 6750	iron
+T67	problem 6356 6371	early pneumonia
+T68	problem 4454 4469	calf tenderness
+T69	problem 2861 2889	mild left atrial enlargement
+T70	problem 6201 6233	a typical influenza presentation
+T71	test 4538 4567	cranial nerves ii through xii
+T72	test 4500 4525	mental status examination
+T73	problem 2719 2722	low
+T74	test 3732 3752	physical examination
+T75	problem 2986 3006	known drug allergies
+T76	treatment 3039 3045	evista
+T77	test 2703 2709	a tibc
+T78	test 3843 3858	the examination
+T79	treatment 3068 3077	tamoxifen
+T80	treatment 3100 3110	lisinopril
+T81	problem 2569 2577	cataract
+T82	problem 2580 2590	osteopenia
+T83	problem 1921 1934	breast cancer
+T84	problem 2625 2649	urinary tract infections
+T85	treatment 2035 2059	sentinel node dissection
+T86	test 5036 5046	hematocrit
+T87	test 3601 3612	temperature
+T88	test 3637 3651	blood pressure
+T89	test 5054 5068	platelet count
+T90	test 3656 3664	systolic
+T91	problem 4147 4150	dry
+T92	problem 468 474	chills
+T93	test 3667 3683	respiratory rate
+T94	treatment 3191 3213	enteric coated aspirin
+T95	treatment 276 293	radiation therapy
+T96	problem 235 248	breast cancer
+T97	test 1552 1576	her liver function tests
+T98	treatment 3271 3279	aggrenox
+T99	test 1622 1629	her dfa
+T100	problem 1647 1659	influenzae a
+T101	problem 3503 3516	breast cancer
+T102	test 750 773	systolic blood pressure
+T103	test 5108 5116	chloride
+T104	treatment 1503 1522	the sepsis protocol
+T105	test 5004 5009	bands
+T106	treatment 1475 1489	central access
+T107	problem 6437 6453	a viral syndrome
+T108	problem 6374 6395	loose bowel movements
+T109	test 1427 1446	a net fluid balance
+T110	treatment 3132 3163	triamterene/hydrochlorothiazide
+T111	test 1404 1418	blood pressure
+T112	problem 2142 2150	her2/neu
+T113	problem 2109 2137	estrogen receptor positivity
+T114	problem 4398 4410	nondistended
+T115	problem 4213 4228	lymphadenopathy
+T116	test 3621 3631	heart rate
+T117	test 1665 1680	a viral culture
+T118	test 2348 2374	magnetic resonance imaging
+T119	problem 5407 5416	influenza
+T120	treatment 2486 2495	meclizine
+T121	problem 2459 2477	peripheral vertigo
+T122	problem 5361 5372	hypotension
+T123	problem 2334 2345	limb ataxia
+T124	problem 4009 4025	sclera anicteric
+T125	treatment 2162 2182	left chest radiation
+T126	problem 2259 2301	vertebral basilar cerebrovascular accident
+T127	problem 2558 2566	glaucoma
+T128	problem 4182 4207	jugular venous distention
+T129	treatment 1965 1992	status post left lumpectomy
+T130	problem 2535 2555	hypercholesterolemia
+T131	problem 2520 2532	hypertension
+T132	problem 2828 2856	trivial mitral regurgitation
+T133	problem 2503 2517	hypothyroidism
+T134	problem 512 533	loose bowel movements
+T135	problem 539 547	diarrhea
+T136	problem 555 560	blood
+T137	problem 2593 2611	left hip arthritis
+T138	problem 449 455	coryza
+T139	treatment 5833 5868	two units of packed red blood cells
+T140	problem 458 465	malaise
+T141	treatment 296 305	tamoxifen
+T142	test 6768 6782	her hematocrit
+T143	problem 563 585	decreased urine output
+T144	problem 424 433	dry cough
+T145	problem 670 691	labile blood pressure
+T146	test 4979 4990	neutrophils
+T147	treatment 7339 7347	aggrenox
+T148	treatment 1015 1041	broad spectrum antibiotics
+T149	problem 6326 6352	a bacterial superinfection
+T150	test 1053 1077	a white blood cell count
+T151	test 4939 4961	white blood cell count
+T152	test 2666 2687	a baseline hematocrit
+T153	problem 2652 2658	anemia
+T154	test 697 720	systolic blood pressure
+T155	problem 933 945	early sepsis
+T156	problem 7557 7568	influenza a
+T157	test 4614 4625	chest x-ray
+T158	problem 1374 1394	evidence of bleeding
+T159	treatment 1266 1301	two units of packed red blood cells
+T160	test 1306 1318	a hematocrit
+T161	treatment 6881 6887	evista
+T162	test 1352 1366	her hematocrit
+T163	problem 4416 4434	hepatosplenomegaly
+T164	problem 332 346	hyperlipidemia
+T165	problem 2076 2103	invasive mucinous carcinoma
+T166	test 6085 6103	the viral cultures
+T167	treatment 806 838	two liters of intravenous fluids
+T168	treatment 263 273	lumpectomy
+T169	test 1716 1740	blood and urine cultures
+T170	problem 129 134	cough
+T171	treatment 7419 7431	levofloxacin
+T172	problem 2727 2742	a high ferritin
+T173	problem 150 161	dehydration
+T174	test 4338 4348	percussion
+T175	problem 137 147	rhinorrhea
+T176	treatment 7259 7281	enteric coated aspirin
+T177	problem 317 329	hypertension
+T178	test 2745 2759	echocardiogram
+T179	treatment 2015 2029	repeat surgery
+T180	treatment 5743 5772	three liters of normal saline
+T181	problem 436 446	rhinorrhea
+T182	problem 349 382	multiple urinary tract infections
+T183	test 5092 5101	potassium
+T184	problem 5285 5297	hypertension
+T185	problem 477 485	headache
+T186	test 1094 1099	bands
+T187	treatment 3237 3246	meclizine
+T188	treatment 611 619	flu shot
+T189	problem 2950 2968	inducible ischemia
+T190	treatment 6285 6293	levaquin
+T191	test 5079 5085	sodium
+T192	test 2892 2911	cardiac stress test
+T193	treatment 7136 7145	tamoxifen
+T194	problem 6144 6164	the initial bandemia
+T195	test 5139 5158	blood urea nitrogen
+T196	test 5707 5725	her blood pressure
+T197	test 1595 1610	random cortisol
+R1	TrAP Arg1:T4 Arg2:T5
+R2	PIP Arg1:T12 Arg2:T13
+R3	TeCP Arg1:T16 Arg2:T17
+R4	PIP Arg1:T29 Arg2:T28
+R5	TeRP Arg1:T32 Arg2:T33
+R6	TeRP Arg1:T32 Arg2:T34
+R7	TeRP Arg1:T35 Arg2:T36
+R8	PIP Arg1:T38 Arg2:T37
+R9	PIP Arg1:T38 Arg2:T39
+R10	TrAP Arg1:T42 Arg2:T17
+R11	TeRP Arg1:T55 Arg2:T56
+R12	TeRP Arg1:T55 Arg2:T57
+R13	TeRP Arg1:T55 Arg2:T58
+R14	TeRP Arg1:T62 Arg2:T63
+R15	TeRP Arg1:T77 Arg2:T73
+R16	TrAP Arg1:T85 Arg2:T83
+R17	TrAP Arg1:T95 Arg2:T96
+R18	TeRP Arg1:T99 Arg2:T100
+R19	PIP Arg1:T107 Arg2:T108
+R20	TeCP Arg1:T117 Arg2:T100
+R21	TeRP Arg1:T118 Arg2:T54
+R22	TrAP Arg1:T120 Arg2:T121
+R23	PIP Arg1:T122 Arg2:T20
+R24	PIP Arg1:T122 Arg2:T119
+R25	PIP Arg1:T126 Arg2:T123
+R26	TrAP Arg1:T129 Arg2:T83
+R27	PIP Arg1:T134 Arg2:T135
+R28	PIP Arg1:T134 Arg2:T136
+R29	TrAP Arg1:T141 Arg2:T96
+R30	TeRP Arg1:T152 Arg2:T153
+R31	TeRP Arg1:T154 Arg2:T145
+R32	TeRP Arg1:T157 Arg2:T60
+R33	TrAP Arg1:T161 Arg2:T50
+R34	PIP Arg1:T165 Arg2:T113
+R35	TeRP Arg1:T166 Arg2:T36
+R36	TrAP Arg1:T168 Arg2:T96
+R37	TeRP Arg1:T178 Arg2:T132
+R38	TeRP Arg1:T178 Arg2:T69
+R39	TrAP Arg1:T179 Arg2:T83
+R40	TrAP Arg1:T190 Arg2:T149
+R41	TrAP Arg1:T190 Arg2:T67
+R42	TeRP Arg1:T192 Arg2:T189
+R43	PIP Arg1:T194 Arg2:T70

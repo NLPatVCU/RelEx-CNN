@@ -7,9 +7,9 @@ from utils import file
 
 class Set_Connection:
     def __init__(self, CSV=False, dataset=None, rel_labels=None, no_labels=None, test=False, no_rel_multiple=False,
-                 dominant_entity = 'S', no_of_cores = 64, predictions_folder = None,
+                 dominant_entity = 'S', no_of_cores = 64, down_sample=None, down_sample_ratio=0.2, predictions_folder = None,
                  write_Entites = False, sentence_only = False, sentences=None, labels=None, preceding_segs=None, concept1_segs=None,
-                 middle_segs=None, concept2_segs=None, succeeding_segs=None, concept1_label_segs=None,concept2_label_segs=None, track=None, ):
+                 middle_segs=None, concept2_segs=None, succeeding_segs=None, track=None):
         """
         Creates data objects directly from the dataset folder and call for segmentation or take in segments (a set of CSVs)
         :type write_Entites: write entities and predictions to file
@@ -54,7 +54,7 @@ class Set_Connection:
             self.rel_labels = rel_labels
             self.no_labels = no_labels
             self.no_rel_multiple = no_rel_multiple
-            self.data_object = Segmentation(self.dataset, self.rel_labels, self.no_labels, self.no_rel_multiple, test=self.test, dominant_entity = dominant_entity, no_of_cores=no_of_cores, predictions_folder = predictions_folder,write_Entites = write_Entites ).segments
+            self.data_object = Segmentation(self.dataset, self.rel_labels, self.no_labels, self.no_rel_multiple, test=self.test, dominant_entity = dominant_entity, no_of_cores=no_of_cores, predictions_folder = predictions_folder,write_Entites = write_Entites, down_sample=down_sample, down_sample_ratio=down_sample_ratio  ).segments
 
     @property
     def get_data_object(self):
