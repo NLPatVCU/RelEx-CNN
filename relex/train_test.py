@@ -7,7 +7,7 @@ from RelEx_NN.cnn import Sentence_CNN
 from segment import Set_Connection
 
 
-def segment(train, test, entites, no_rel=None, no_rel_multiple=False, parallelize=False, no_of_cores=64, down_sample=None, down_sample_ratio=0.2,
+def segment(train, test, entites, no_rel=None, no_rel_multiple=False, dominant_entity = 'S', no_of_cores=64, down_sample=None, down_sample_ratio=0.2,
             predictions_folder=None):
     """
     Segmentation of the training and testing data
@@ -24,17 +24,17 @@ def segment(train, test, entites, no_rel=None, no_rel_multiple=False, paralleliz
     if no_rel:
         seg_train = Set_Connection(CSV=False, dataset=train, rel_labels=entites, no_labels=no_rel,
                                    no_rel_multiple=no_rel_multiple, write_Entites=False,
-                                   parallelize=parallelize, no_of_cores=no_of_cores,
+                                   no_of_cores=no_of_cores, dominant_entity =dominant_entity,
                                    predictions_folder=predictions_folder, down_sample=down_sample, down_sample_ratio=down_sample_ratio).data_object
     else:
         print("Starting segmentation of train data")
         seg_train = Set_Connection(CSV=False, dataset=train, rel_labels=entites, write_Entites=False,
-                                   parallelize=parallelize, no_of_cores=no_of_cores,
+                                no_of_cores=no_of_cores, dominant_entity=dominant_entity,
                                    predictions_folder=predictions_folder, down_sample=down_sample, down_sample_ratio=down_sample_ratio).data_object
 
     print("Starting segmentation of test data")
-    seg_test = Set_Connection(CSV=False, dataset=test, rel_labels=entites, test=True, parallelize=True,
-                              write_Entites=True, no_of_cores=64, predictions_folder=predictions_folder, down_sample=down_sample, down_sample_ratio=down_sample_ratio).data_object
+    seg_test = Set_Connection(CSV=False, dataset=test, rel_labels=entites, test=True,
+                              write_Entites=True, no_of_cores=64, dominant_entity = dominant_entity, predictions_folder=predictions_folder, down_sample=down_sample, down_sample_ratio=down_sample_ratio).data_object
 
     return seg_train, seg_test
 

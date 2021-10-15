@@ -3,7 +3,7 @@
 import configparser
 import CV, train_test
 import ast
-from N2C2 import re_number, extract_entites
+from utils import re_number, extract_entites
 
 config = configparser.ConfigParser()
 config.read('configs/n2c2.ini')
@@ -31,24 +31,24 @@ if test:
         for label in rel_labels[1:]:
             rel_labels = [rel_labels[0], label]
             # perform segmentation
-            seg_train, seg_test = train_test.segment(config['SEGMENTATION']['train_path'], config['SEGMENTATION']['test_path'], rel_labels, no_rel_label, dominant_entity[0], config.getboolean('SEGMENTATION', 'no_rel_multiple'),
+            seg_train, seg_test = train_test.segment(config['SEGMENTATION']['train_path'], config['SEGMENTATION']['test_path'], rel_labels, no_rel_label, config.getboolean('SEGMENTATION', 'no_rel_multiple'), dominant_entity[0],
                                    config.getint('SEGMENTATION', 'no_of_cores'), downsample_allow,
-                                         config.getint('SEGMENTATION', 'downsampla_ratio'))
+                                         config.getint('SEGMENTATION', 'downsample_ratio'))
             train_test.run_CNN_model(seg_train, seg_test, config['CNN_MODELS']['embedding_path'], config.getint('CNN_MODELS', 'embedding_dim'),
                          config['CNN_MODELS']['model'], dominant_entity[0], write_predictions, write_no_relations,
                          config['PREDICTIONS']['initial_predictions'], config['PREDICTIONS']['binary_predictions'])
 
         re_number.append(config['PREDICTIONS']['binary_predictions'], config['PREDICTIONS']['final_predictions'])
     else:
-        seg_train, seg_test = train_test.segment(config['SEGMENTATION']['train_path'], config['SEGMENTATION']['test_path'], rel_labels, no_rel_label, dominant_entity[0], config.getboolean('SEGMENTATION', 'no_rel_multiple'),
+        seg_train, seg_test = train_test.segment(config['SEGMENTATION']['train_path'], config['SEGMENTATION']['test_path'], rel_labels, no_rel_label,  config.getboolean('SEGMENTATION', 'no_rel_multiple'), dominant_entity[0],
                                    config.getint('SEGMENTATION', 'no_of_cores'), downsample_allow,
-                                         config.getint('SEGMENTATION', 'downsampla_ratio'), config['PREDICTIONS']['final_predictions'])
+                                         config.getint('SEGMENTATION', 'downsample_ratio'), config['PREDICTIONS']['final_predictions'])
 
         train_test.run_CNN_model(seg_train, seg_test, config['CNN_MODELS']['embedding_path'], config.getint('CNN_MODELS', 'embedding_dim'),
                              config['CNN_MODELS']['model'], dominant_entity[0], write_predictions, write_no_relations,
                              config['PREDICTIONS']['initial_predictions'], config['PREDICTIONS']['final_predictions'])
 else:
-    seg_train = CV.segment(config['SEGMENTATION']['train_path'], rel_labels, no_rel_label, dominant_entity[0], config.getboolean('SEGMENTATION', 'no_rel_multiple'),
+    seg_train = CV.segment(config['SEGMENTATION']['train_path'], rel_labels, no_rel_label,  config.getboolean('SEGMENTATION', 'no_rel_multiple'), dominant_entity[0],
                            config.getint('SEGMENTATION', 'no_of_cores'),config['PREDICTIONS']['final_predictions'])
 
     CV.run_CNN_model(seg_train, config['CNN_MODELS']['embedding_path'], config.getint('CNN_MODELS', 'embedding_dim'),
