@@ -131,7 +131,7 @@ class Segmentation:
             ext = ".ann"
             file.delete_all_files(predictions_folder, ext)
 
-        self.nlp_model.add_pipe(sentencizer)
+        self.nlp_model.add_pipe('sentencizer')
 
         # global segmentation object that returns all segments and the label
         self.segments = {'seg_preceding': [], 'seg_concept1': [], 'seg_concept2': [], 'seg_concept1_label': [],
